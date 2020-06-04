@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
+import { Map, TileLayer, Marker } from 'react-leaflet';
 
 import './styles.css';
 
@@ -49,6 +50,15 @@ const CreatePoint = () => {
                         <span>Selecione o endereço no mapa</span>
                     </legend>
 
+                    <Map center={[-27.2092052, -49.6401092]} zoom={15}>
+                        <TileLayer
+                            attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" 
+                        />
+
+                        <Marker  position={[-27.2092052, -49.6401092]}/>
+                    </Map>
+
                     <div className="field-group">
                         <div className="field">
                             <label htmlFor="uf">Estado (UF)</label>
@@ -73,27 +83,27 @@ const CreatePoint = () => {
 
                     <ul className="items-grid">
                         <li>
-                            <img src="http://localhost:3333/uploads/oleo.svg" alt="Teste"/>
+                            <img src="http://localhost:3333/uploads/oleo.svg" alt="Teste" />
                             <span>Óleo de Cozinha</span>
                         </li>
                         <li>
-                            <img src="http://localhost:3333/uploads/oleo.svg" alt="Teste"/>
+                            <img src="http://localhost:3333/uploads/oleo.svg" alt="Teste" />
                             <span>Óleo de Cozinha</span>
                         </li>
                         <li className="selected">
-                            <img src="http://localhost:3333/uploads/oleo.svg" alt="Teste"/>
+                            <img src="http://localhost:3333/uploads/oleo.svg" alt="Teste" />
                             <span>Óleo de Cozinha</span>
                         </li>
                         <li>
-                            <img src="http://localhost:3333/uploads/oleo.svg" alt="Teste"/>
+                            <img src="http://localhost:3333/uploads/oleo.svg" alt="Teste" />
                             <span>Óleo de Cozinha</span>
                         </li>
                         <li>
-                            <img src="http://localhost:3333/uploads/oleo.svg" alt="Teste"/>
+                            <img src="http://localhost:3333/uploads/oleo.svg" alt="Teste" />
                             <span>Óleo de Cozinha</span>
                         </li>
                         <li>
-                            <img src="http://localhost:3333/uploads/oleo.svg" alt="Teste"/>
+                            <img src="http://localhost:3333/uploads/oleo.svg" alt="Teste" />
                             <span>Óleo de Cozinha</span>
                         </li>
                     </ul>
