@@ -35,15 +35,15 @@ const Points = () => {
         navigation.navigate('Detail');
     }
 
-    function handleSelectItem(id: number){
+    function handleSelectItem(id: number) {
         const alreadySelected = selectedItems.findIndex(item => item === id);
 
-        if(alreadySelected >=0){
+        if (alreadySelected >= 0) {
             const filteredItems = selectedItems.filter(item => item !== id);
 
             setSelectedItems(filteredItems);
         } else {
-            setSelectedItems([ ...selectedItems, id ]);
+            setSelectedItems([...selectedItems, id]);
         }
     }
 
@@ -79,14 +79,15 @@ const Points = () => {
             <View style={styles.itemsContainer}>
                 <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ paddingHorizontal: 29 }}>
                     {items.map(item => (
-                        <TouchableOpacity 
-                        key={String(item.id)} 
-                        style={[
-                            styles.item,
-                            selectedItems.includes(item.id) ? styles.selectedItem : {}
-                            ]} 
-                        onPress={() => handleSelectItem(item.id)} 
-                        activeOpacity={0.6}>
+                        <TouchableOpacity
+                            key={String(item.id)}
+                            style={[
+                                styles.item,
+                                selectedItems.includes(item.id) ? styles.selectedItem : {}
+                            ]}
+                            onPress={() => handleSelectItem(item.id)}
+                            activeOpacity={0.6}>
+                                
                             <SvgUri width={42} height={42} uri={item.image_url} />
                             <Text style={styles.itemTitle}>{item.title}</Text>
                         </TouchableOpacity>
