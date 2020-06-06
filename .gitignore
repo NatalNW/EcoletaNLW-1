@@ -37,6 +37,7 @@
 /server/yarn-debug.log*
 /server/yarn-error.log*
 
+/mobile/yarn-error.log*
 /mobile/npm-debug.*
 /mobile/*.jks
 /mobile/*.p8
