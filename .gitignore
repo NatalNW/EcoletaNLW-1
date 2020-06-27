@@ -1,5 +1,5 @@
 /server/src/database/database.sqlite
-
+/server/uploads/*.png
 # macOS
 /mobile/.DS_Store
 
